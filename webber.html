@@ -1,0 +1,95 @@
+<!doctype html>
+<!--
+	Webber web page
+	written by Pebble8969
+-->
+
+<html>
+	<head>
+		<title>Webber</title>
+		<style>
+html {
+	margin: 15px;
+	border: 4px solid #6e738d;
+	padding: 25px;
+	background: #1e1e2e;
+	color: #cad3f5;
+	font-family: monospace;
+	font-size: 16px;
+}
+
+hr {
+	color: #cad3f5;
+}
+
+h1#main {
+	text-align: center;
+	font-style: bold;
+}
+
+h3#main {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+p#main {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+a:link, a:active {
+	color: #74c7ec;
+}
+a:visited {
+	color: #cba6f7;
+}
+a:hover {
+	color: #89dceb;
+}
+		</style>
+		<h1 id=main>Webber</h1>
+		<h3 style="text-align: center">Stupid simple web server for html development.</h3>
+		<div style="text-align: center"><a href="index.html">back</a></div>
+	</head>
+	<hr>
+	<br>
+	<body>
+		<p id=main>
+		Webber is a small development tool that I made for myself when writing simple web pages
+		(like this one). I needed something that was small, lightweight, and re-reads files every
+		time I reload the page, allowing me to see changes that I made without restarting the
+		web server.
+		</p>
+		<p id=main>
+		Another reason why I made it is because I'm not very good at networking, and making this
+		helped me learn just a bit more about how everything works, including binding to an ip
+		and port, handling client requests, and making a multi-threaded web server (obviously).
+		</P>
+		<p id=main>
+		Also this project was made for myself, to fit my needs. While I might build upon it in the
+		future, right now it's not meant for any production use, and I'm only sharing it for
+		people who have a similar usecase/people who want to develop it further to fit their needs.
+		</p>
+		<br>
+		<h3 id=main>Usage:</h3>
+		<ul>
+			<li>Clone the <a href="https://codeberg.org/Pebble8969/webber/">repository</a>.</li>
+			<li>Build using 'cargo build -r' and use the binary in 'target/release/webber'.</a>
+			<li>Run with 'webber OPTIONS FILE'.</li>
+		</ul>
+	</body>
+	<br>
+	<hr>
+	<footer>
+		<p id=main>
+		Check out my 
+		<a href="https://codeberg.org/Pebble8969/">codeberg</a>
+		page and my (no longer used)
+		<a href="https://github.com/Pebble8969/">github</a>
+		page.<br>
+		Props to the
+		<a href="https://catppuccin.com/">catppuccin</a>
+		project for the colour palette.
+		</p>
+	</footer>
+</html>

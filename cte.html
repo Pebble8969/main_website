@@ -1,0 +1,141 @@
+<!doctype html>
+<!--
+	Common Tect Editor web page
+	written by Pebble8969
+-->
+
+<html>
+	<head>
+		<title>Common Test Editor</title>
+		<style>
+html {
+	margin: 15px;
+	border: 4px solid #6e738d;
+	padding: 25px;
+	background: #1e1e2e;
+	color: #cad3f5;
+	font-family: monospace;
+	font-size: 16px;
+}
+
+hr {
+	color: #cad3f5;
+}
+
+h1#main {
+	text-align: center;
+	font-style: bold;
+}
+
+h3#main {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+p#main {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+a:link, a:active {
+	color: #74c7ec;
+}
+a:visited {
+	color: #cba6f7;
+}
+a:hover {
+	color: #89dceb;
+}
+		</style>
+		<h1 id=main>The Common Text Editor</h1>
+		<h3 style="text-align: center">The only editor you'll never need</h3>
+		<div style="text-align: center"><a href="index.html">back</a></div>
+	</head>
+	<hr>
+	<br>
+	<body>
+		<p id=main>
+		The Common Text Editor is a text editor that is written in Rust. It uses a binding scheme
+		that is a mixture between Emacs, Vim, and my own made up ones. It's a great improvement
+		over older iterations (such as actually reassembling a real editor) but still nothing
+		incredible.
+		</p>
+		<p id=main>
+		The previos version was a pretty <a href="https://common-text-editor.co.uk">dated</a>
+		looking project, and was a buggy mess too. This new version, while not fully production
+		quality, fixes a lot of the bugs and quirks that the old project had (even if it required
+		a rewrite to do so). Two biggest improvements were removing a bug where the entire thing
+		flickered during terminal redraws (every keypress), and adding actual cursor movement, not
+		just an input buffer. The first one was a side effect of the terminal drawing abstraction
+		layer that I made, and was fixed by just becoming better and using raw crossterm. The
+		second one could only be classed as ignorance, since at the point I wanted to add the
+		actual editing part of the editor, the file content drawing function was one big messy fix,
+		which made adding editing the way I wanted to pretty hard. This was fixed by just getting
+		better.
+		</p>
+		<br>
+		<h3 id=main>Usage:</h3>
+		<ul>
+			<li>Clone the <a href="https://codeberg.org/Pebble8969/common-text-editor/">repository</a>.</li>
+			<li>Build using 'cargo build -r' and use the binary in 'target/release/cte'.</a>
+			<li>Run with 'cte OPTIONS FILE'.</li>
+		</ul>
+		<h3 id=main>Features:</h3>
+		<ul>
+			<li>Character by character movement.</li>
+			<li>Primitive auto indenting (Like Nano).</li>
+			<li>Configuration options with a config file.</li>
+			<li>Saving cursor position alongside files (Like Vim).</li>
+			<li>Some QoL bindings.</li>
+			<li>Anti emacs-pinky technology.</li>
+			<li>Full bar customisation.</li>
+			<li>Add the ability to make custom themes.</li>
+		</ul>
+		<br>
+		<h3 id=main>Bindings:</h3>
+		<ul>
+			<li>Ctrl + h/j/k/l ... Moves left/down/up/right (arrow keys also work).</li>
+			<li>Ctrl + p/o ....... Scroll up/down.</li>
+			<li>Ctrl + t/b ....... Go straight to the top/bottom of the file.</li>
+			<li>Ctrl + a/s ....... Go to beginning/end of current line.</li>
+			<li>Ctrl + q ......... Quit without saving.</li>
+			<li>Ctrl + w ......... Save and quit.</li>
+			<li>Ctrl + z ......... Sticks and unsticks the ctrl key.</li>
+		</ul>
+		<br>
+		<h3 id=main>Config options</h3>
+		<ul>
+			<li>theme ............ Specify the name of the theme you're using.</li>
+			<li>bar_bottom ....... Choose wether to have the bar on bottom.</li>
+			<li>bar_char ......... Specify a char to use for the bar empty space.</li>
+			<li>bar_borders ...... Choose wether to have borders on the bar sections.</li>
+			<li>bar_left ......... Specify what to have at the left section of the bar.</li>
+			<li>bar_middle ....... Specify what to have at the middle section of the bar.</li>
+			<li>bar_right ........ Specify what to have at the right section of the bar.</li>
+			<li>show_numbers ..... Choose wether to show line numbers or not.</li>
+			<li>num_alignment .... Specify how to align the numbers.</li>
+			<li>num_char ......... Specify a char to use for the number bar whitespace.</li>
+			<li>num_border ....... Specify a char to use for the number bar border.</li>
+			<li>auto_indent ...... Choose wether to activate auto_indent or not.</li>
+			<li>increment ........ Specify the amount of lines for Ctrl + p/o to scroll.</li>
+			<li>hl_line .......... Choose wether to highlight current cursor line.</li>
+			<li>tab_spaces ....... Choose wether to have TAB use spaces instead of tabs.</li>
+			<li>tab_width ........ Specify the amount of spaces that tabs display/input as.</li>
+			<li>include .......... Specify a file to include along the config. Used for themes.</li>
+		</ul>
+	</body>
+	<br>
+	<hr>
+	<footer>
+		<p id=main>
+		Check out my 
+		<a href="https://codeberg.org/Pebble8969/">codeberg</a>
+		page and my (no longer used)
+		<a href="https://github.com/Pebble8969/">github</a>
+		page.<br>
+		Props to the
+		<a href="https://catppuccin.com/">catppuccin</a>
+		project for the colour palette.
+		</p>
+	</footer>
+</html>
