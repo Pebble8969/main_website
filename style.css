@@ -3,24 +3,74 @@ html {
   font-size: 4px;
   background: #000000;
   color: #ffffff;
-  padding-left: 50px;
-  padding-right: 50px;
+  border-right: double;
+  border-left: double;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 h1 {
-  font-size: 28;
-  text-align: center;
+  font-size: 28px;
+  text-align: left;
 }
 h2 {
-  font-size: 24px;
+  font-size: 22px;
   text-align: left;
 }
 h3 {
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
 }
 
 p {
   font-size: 16px;
   text-align: left;
+}
+ul {
+  font-size: 16px;
+  text-align: left;
+}
+
+a {
+  color: #ff8059;
+  font-size: 16px;
+}
+a:visited {
+  color: #ff8059;
+  font-size: 16px;
+}
+a:hover {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* CLASSES */
+.TitleH1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.TitleH2 {
+  text-align: center;
+}
+.TitleH3 {
+  text-align: center;
+}
+.TitleDiv {
+  font-size: 16px;
+  text-align: center;
+}
+.TitleButton {
+  font-size: 16px;
+  text-align: center;
+  margin: 5px;
+}
+.TitleSubH1 {
+  font-size: 16px;
+  text-align: center;
+  color: #555555;
+}
+.TitleSubH1:hover {
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
 }
